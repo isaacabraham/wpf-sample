@@ -3,6 +3,7 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid Name="MainGrid">
         <StackPanel Name="StackPanel1">
+            <TextBox Name="TextBox1"></TextBox>
             <Button Name="Button1">First Button</Button>
             <Button Name="Button2">Second Button</Button>
         </StackPanel>

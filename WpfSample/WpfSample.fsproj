@@ -864,6 +864,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="1 - Simple.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
     <Resource Include="Main.xaml" />
