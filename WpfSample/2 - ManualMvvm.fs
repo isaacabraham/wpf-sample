@@ -1,10 +1,10 @@
 ﻿module Samples.ManualMvvm
 
 open FsXaml
-open System.Windows
-open System.ComponentModel
-open System.Windows.Input
 open System
+open System.ComponentModel
+open System.Windows
+open System.Windows.Input
 
 type MainWindow = XAML<"Main.xaml">
 

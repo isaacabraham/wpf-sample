@@ -5,4 +5,4 @@ open System.Windows
 [<EntryPoint>]
 let main _ = 
     let app = Application()
-    Samples.ManualMvvm.createWindow() |> app.Run
+    Samples.ViewModule.createWindow() |> app.Run
