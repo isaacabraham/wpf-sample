@@ -6,11 +6,11 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock Name="TextBlock1" TextAlignment="Center" VerticalAlignment="Center" FontSize="50">0</TextBlock>
+        <TextBlock Name="TextBlock1" TextAlignment="Center" VerticalAlignment="Center" FontSize="50" Text="{Binding Score}"></TextBlock>
         <StackPanel Name="StackPanel1" Grid.Column="1" VerticalAlignment="Center">
-            <Button Margin="2" Name="Button1">Increment</Button>
-            <Button Margin="2" Name="Button2">Decrement</Button>
-            <Button Margin="2" Name="Reset">Reset</Button>
+            <Button Margin="2" Name="Button1" Command="{Binding Increment}">Increment</Button>
+            <Button Margin="2" Name="Button2" Command="{Binding Decrement}">Decrement</Button>
+            <Button Margin="2" Name="Reset" Command="{Binding Reset}">Reset</Button>
         </StackPanel>
     </Grid>
 </Window>

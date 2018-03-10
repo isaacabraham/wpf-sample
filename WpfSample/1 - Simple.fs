@@ -11,10 +11,10 @@ let createWindow() =
     let window = MainWindow()
     let mutable value = 0
 
-    let update() = window.TextBlock1.Text <- string value
+    let updateValue() = window.TextBlock1.Text <- string value
     
-    window.Button1.Click |> Event.add(fun c -> value <- value + 1; update())
-    window.Button2.Click |> Event.add(fun c -> value <- value - 1; update())
-    window.Reset.Click |> Event.add(fun c -> value <- 0; update())
-
+    window.Button1.Click |> Event.add(fun c -> value <- value + 1; updateValue())
+    window.Button2.Click |> Event.add(fun c -> value <- value - 1; updateValue())
+    window.Reset.Click |> Event.add(fun c -> value <- 0; updateValue())
+    updateValue()
     window
