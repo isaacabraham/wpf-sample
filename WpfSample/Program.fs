@@ -1,8 +1,8 @@
 ﻿open System
-open System.Windows
 
-[<STAThread>]
-[<EntryPoint>]
+[<STAThread; EntryPoint>]
 let main _ = 
-    let app = Application()
-    Samples.ViewModule.createWindow() |> app.Run
+    Samples.Simple.run()
+    //Samples.ManualMvvm.run()
+    //Samples.ViewModule.run()
+    //Samples.Elmish.run()

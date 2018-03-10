@@ -7,14 +7,14 @@ open System.Windows
 
 type MainWindow = XAML<"Main.xaml">
 
-let createWindow() =
+let run() =
     let window = MainWindow()
-    let mutable value = 0
 
-    let updateValue() = window.TextBlock1.Text <- string value
+    let setScore v = window.TextBlock1.Text <- string v
     
-    window.Button1.Click |> Event.add(fun c -> value <- value + 1; updateValue())
-    window.Button2.Click |> Event.add(fun c -> value <- value - 1; updateValue())
-    window.Reset.Click |> Event.add(fun c -> value <- 0; updateValue())
-    updateValue()
-    window
+    window.Button1.Click |> Event.add(fun _ -> setScore ((int window.TextBlock1.Text) + 1))
+    window.Button2.Click |> Event.add(fun _ -> setScore ((int window.TextBlock1.Text) - 1))
+    window.Reset.Click |> Event.add(fun _ -> setScore 0)
+    setScore 0
+    let app = Application()
+    app.Run window
