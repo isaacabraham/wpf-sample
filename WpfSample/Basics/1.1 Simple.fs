@@ -1,11 +1,10 @@
 ﻿/// This sample represents a "basic" WPF application using raw event handlers etc. - essentially
 /// directly modifying the view.
-module Samples.Simple
+module Samples.Basics.Simple
 
 open FsXaml
 open System.Windows
-
-type MainWindow = XAML<"Main.xaml">
+type MainWindow = XAML< @"Basics/View.xaml">
 
 let run() =
     let window = MainWindow()

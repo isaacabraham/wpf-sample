@@ -1,14 +1,14 @@
 ﻿/// This sample represents a WPF application using a raw MVVM model, using a manual
 /// implementation of INotifyPropertyChanged and ICommand etc., and a mutable view model.
 
-module Samples.ManualMvvm
+module Samples.Basics.ManualMvvm
 
 open FsXaml
 open System.ComponentModel
 open System.Windows
 open System.Windows.Input
 
-type MainWindow = XAML<"Main.xaml">
+type MainWindow = XAML< @"Basics/View.xaml">
 
 let private makeCommand onExecute =
     let event = Event<_,_>()

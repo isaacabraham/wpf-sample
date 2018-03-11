@@ -1,0 +1,38 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        Title="MainWindow" Height="320" Width="400">
+    <Grid Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <DataGrid ItemsSource="{Binding Customers}" SelectedItem="{Binding SelectedCustomer}" SelectionMode="Single" IsSynchronizedWithCurrentItem="True" AutoGenerateColumns="True">
+        </DataGrid>
+        <StackPanel Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Name" Margin="2"/>
+                    <TextBox Grid.Column="1" Margin="2" Text="{Binding NewCustomerRequestName}"/>
+                    <Label Grid.Row="1" Content="Balance" Margin="2"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" Margin="2" Text="{Binding NewCustomerRequestBalance}"/>
+                    <Label Grid.Row="2" Content="Country" Margin="2"/>
+                    <ComboBox Grid.Row="2" Grid.Column="1" Margin="2" SelectedValue="{Binding NewCustomerRequestCountry}" ItemsSource="{Binding Countries}" />
+                </Grid>
+                <Button Margin="2" Command="{Binding Add}" Grid.Row="1">Add New</Button>
+            </Grid>
+            <Button Margin="2" Command="{Binding Remove}">Remove Selected</Button>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -2,13 +2,13 @@
 /// library handles all mutation for us; we simply implement the update function, which
 /// is completely immutable. The view function essentially ties up WPF bindings to Elmish
 /// commands etc.
-module Samples.Elmish
+module Samples.Basics.Elmish
 
 open Elmish
 open Elmish.WPF
 open FsXaml
 
-type MainWindow = XAML<"Main.xaml">
+type MainWindow = XAML< @"Basics/View.xaml">
 type Model = { Score : int }
 type Msg = Increment | Decrement | Reset
 

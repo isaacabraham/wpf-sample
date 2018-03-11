@@ -1,14 +1,14 @@
 ﻿/// This sample represents a WPF application using an MVVM model via the ViewModule
 /// library. Note that the model is still mutable. However, the ViewModelBase library
 /// automatically handles INotifyPropertyChanged and ICommand creation.
-module Samples.ViewModule
+module Samples.Basics.ViewModule
 
 open FsXaml
 open ViewModule
 open ViewModule.FSharp
 open System.Windows
 
-type MainWindow = XAML<"Main.xaml">
+type MainWindow = XAML< @"Basics/View.xaml">
 
 type ViewModel() as self =
     inherit ViewModelBase()
